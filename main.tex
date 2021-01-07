@@ -1,0 +1,39 @@
+\documentclass{memoir}
+\usepackage{tempora}
+\usepackage[russian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{indentfirst}
+\usepackage[bibstyle=gost-numeric,citestyle=gost-numeric]{biblatex}
+\usepackage[left=25mm, top=20mm, right=10mm, bottom=20mm]{geometry}
+\usepackage[14pt]{extsizes}
+\usepackage[bigdelims,vvarbb]{newtxmath}
+\usepackage{graphicx}
+\DeclareBibliographyCategory{cited}
+\AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
+\newtheorem{defn}{Определение}
+\renewcommand{\baselinestretch}{1.5}
+\bibliography{biblio}
+\nocite{*}
+%\DeclareUnicodeCharacter{0301}{*************************************}
+\begin{document}
+\tableofcontents
+\chapter*{Введение}
+\input{000_intro.tex}
+\chapter{Современное состояние проблемы оценки релевантности}
+\section{Обзор существующих публикаций}
+\input{120_review.tex}
+\chapter{Методы исследования}
+\input{200_defs.tex}
+\section{Разбиение проблемы на задачи}
+\input{210_decomposition.tex}
+\chapter{Результаты исследования}
+\section{Описание выполненных экспериментов}
+\input{310_models.tex}
+\subsection{Модель с учетом грамматики}
+\input{311_grammar.tex}
+\subsection{Модель с использованием семантической сети}
+\input{312_wordnet.tex}
+\printbibliography[title={Список использованных источников},category=cited]
+\printbibliography[title={Непроцитированные источники (должно быть пусто)},notcategory=cited]
+\end{document}
