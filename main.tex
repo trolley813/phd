@@ -1,28 +1,106 @@
-\documentclass{memoir}
+% chktex-file 19
+\documentclass[a4paper,14pt,oneside,openany]{memoir}
 \usepackage{tempora}
 \usepackage[russian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{csquotes}
 \usepackage{indentfirst}
 \usepackage[bibstyle=gost-numeric,citestyle=gost-numeric]{biblatex}
-\usepackage[left=25mm, top=20mm, right=10mm, bottom=20mm]{geometry}
-\usepackage[14pt]{extsizes}
+\usepackage{geometry}
 \usepackage[bigdelims,vvarbb]{newtxmath}
 \usepackage{graphicx}
+\usepackage{relsize}
+\geometry{a4paper, top=20mm, bottom=20mm, left=25mm, right=15mm}
 \DeclareBibliographyCategory{cited}
 \AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
 \newtheorem{defn}{Определение}
 \renewcommand{\baselinestretch}{1.5}
+
+% Page numbering style
+\makeevenhead{plain}{}{\thepage}{}
+\makeoddhead{plain}{}{\thepage}{}
+\makeevenfoot{plain}{}{}{}
+\makeoddfoot{plain}{}{}{}
+\pagestyle{plain}
+
+% Headers etc.
+\newcommand{\basegostsectionfont}{\fontsize{15pt}{17pt}\selectfont\bfseries}
+\newcommand{\hdngalign}{\centering}
+\newcommand{\hdngaligni}{}
+\newlength{\myindentlen}
+\setlength{\myindentlen}{1\parindent}
+
+\newlength{\curtextsize}
+\setlength{\myindentlen}{15pt}
+
+\makechapterstyle{thesisgost}{%
+    \chapterstyle{default}
+    \setlength{\beforechapskip}{0pt}
+    \setlength{\midchapskip}{0pt}
+    \setlength{\afterchapskip}{3\curtextsize}
+    \renewcommand*{\chapnamefont}{\basegostsectionfont}
+    \renewcommand*{\chapnumfont}{\basegostsectionfont}
+    \renewcommand*{\chaptitlefont}{\basegostsectionfont}
+    \renewcommand*{\chapterheadstart}{}
+    \renewcommand*{\afterchapternum}{.\space}
+    \renewcommand*{\printchapternum}{\hdngaligni\hdngalign\chapnumfont \thechapter}
+    \renewcommand*{\printchaptername}{}
+    \renewcommand*{\printchapternonum}{\hdngaligni\hdngalign}
+}
+
+\makeatletter
+\makechapterstyle{thesisgostchapname}{%
+    \chapterstyle{thesisgost}
+    \renewcommand*{\printchapternum}{\chapnumfont \thechapter}
+    \renewcommand*{\printchaptername}{\hdngaligni\hdngalign\chapnamefont \@chapapp} %
+}
+\makeatother
+
+\chapterstyle{thesisgost}
+
+\setsecheadstyle{\basegostsectionfont\hdngalign}
+\setsecindent{\myindentlen}
+
+\setsubsecheadstyle{\basegostsectionfont\hdngalign}
+\setsubsecindent{\myindentlen}
+
+\setsubsubsecheadstyle{\basegostsectionfont\hdngalign}
+\setsubsubsecindent{\myindentlen}
+
+\sethangfrom{\noindent #1}
+
+\chapterstyle{thesisgostchapname}
+\renewcommand*{\cftchaptername}{\chaptername\space}
+
+% \setbeforesecskip{3\curtextsize}
+% \setaftersecskip{3\curtextsize}
+% \setbeforesubsecskip{3\curtextsize}
+% \setaftersubsecskip{3\curtextsize}
+% \setbeforesubsubsecskip{3\curtextsize}
+% \setaftersubsubsecskip{3\curtextsize}
+
+\setlength{\cftbeforechapterskip}{0pt plus 0pt}
+\renewcommand*{\insertchapterspace}{}
+
 \bibliography{biblio}
 \nocite{*}
 %\DeclareUnicodeCharacter{0301}{*************************************}
 \begin{document}
+\relscale{1.07}
+\sloppy
+\input{001_title.tex}
 \tableofcontents
 \chapter*{Введение}
-\input{000_intro.tex}
+\input{002_intro.tex}
 \chapter{Современное состояние проблемы оценки релевантности}
+\section{Анализ состояние отрасли знаний. Исторические аспекты проблемы}
+\input{110_history.tex}
 \section{Обзор существующих публикаций}
 \input{120_review.tex}
+\section{Обоснование предмета исследований}
+\input{130_research.tex}
+\section{Резюме}
+\input{140_resume.tex}
 \chapter{Методы исследования}
 \input{200_defs.tex}
 \section{Разбиение проблемы на задачи}
@@ -34,6 +112,8 @@
 \input{311_grammar.tex}
 \subsection{Модель с использованием семантической сети}
 \input{312_wordnet.tex}
+\subsection{Модель с использованием векторного представления слов}
+\input{313_word2vec.tex}
 \printbibliography[title={Список использованных источников},category=cited]
 \printbibliography[title={Непроцитированные источники (должно быть пусто)},notcategory=cited]
 \end{document}
