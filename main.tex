@@ -67,17 +67,18 @@
 \setsubsubsecheadstyle{\basegostsectionfont\hdngalign}
 \setsubsubsecindent{\myindentlen}
 
-\sethangfrom{\noindent #1}
+%\sethangfrom{\noindent #1}
 
 \chapterstyle{thesisgostchapname}
 \renewcommand*{\cftchaptername}{\chaptername\space}
 
-% \setbeforesecskip{3\curtextsize}
-% \setaftersecskip{3\curtextsize}
-% \setbeforesubsecskip{3\curtextsize}
-% \setaftersubsecskip{3\curtextsize}
-% \setbeforesubsubsecskip{3\curtextsize}
-% \setaftersubsubsecskip{3\curtextsize}
+\setbeforesecskip{3\baselineskip}
+\setaftersecskip{2\baselineskip}
+\setbeforesubsecskip{3\baselineskip}
+\setaftersubsecskip{2\baselineskip}
+\setbeforesubsubsecskip{3\baselineskip}
+\setaftersubsubsecskip{2\baselineskip}
+
 
 \setlength{\cftbeforechapterskip}{0pt plus 0pt}
 \renewcommand*{\insertchapterspace}{}
@@ -89,8 +90,9 @@
 \relscale{1.07}
 \sloppy
 \input{001_title.tex}
-\tableofcontents
+\tableofcontents*
 \chapter*{Введение}
+\addcontentsline{toc}{chapter}{Введение}
 \input{002_intro.tex}
 \chapter{Современное состояние проблемы оценки релевантности}
 \section{Анализ состояние отрасли знаний. Исторические аспекты проблемы}
@@ -114,6 +116,14 @@
 \input{312_wordnet.tex}
 \subsection{Модель с использованием векторного представления слов}
 \input{313_word2vec.tex}
+\section{Сопоставление полученных результатов с результатами исследований предшественников.
+Анализ полноты решения задач}
+\input{320_comparison.tex}
+\section{Предложения по возможности практического и научного использования результатов решения проблемы}
+\input{330_usage.tex}
+\chapter*{Заключение}
+\addcontentsline{toc}{chapter}{Заключение}
+\input{999_conclusion.tex}
 \printbibliography[title={Список использованных источников},category=cited]
 \printbibliography[title={Непроцитированные источники (должно быть пусто)},notcategory=cited]
 \end{document}
