@@ -160,7 +160,43 @@ Sweden (Швеция), представлены в таблице \ref{tab4} (з
 
 Для обучения генеративно-состязательной сети был сгенерирован и подобран набор из 320 поисковых запросов.
 
-Результаты по некоторым тестовым запросам представлены % TODO: таблица, график
+Результаты по некоторым тестовым запросам представлены в таблице \ref{tab5} % TODO: график
+
+\begin{table}[tbp]
+    \caption{Результаты поисковых запросов в модели без ограничений на количество документов в выдаче}
+    \begin{center}
+        \begin{tabular}{ccc}
+            \toprule
+            \textbf{Запрос} & \multicolumn{2}{c}{\textbf{Оценка релевантности}}                               \\
+                            & \textbf{\textit{Top 10}}                          & \textbf{\textit{Bottom 10}} \\
+            \midrule
+            readers of you in lady byron on           & \(\mu=0.9032\)                                    & \(\mu=0.8968\)              \\
+                                                      & \(\sigma=0.0011\)                                 & \(\sigma=0.0029\)           \\
+            \midrule
+            bowl or in their service  now then        & \(\mu=0.8965\)                                    & \(\mu=0.8912\)              \\
+                                                      & \(\sigma=0.0018\)                                 & \(\sigma=0.0037\)           \\
+            \midrule
+            are about among the fourth the two        & \(\mu=0.9111\)                                    & \(\mu=0.8981\)              \\
+                                                      & \(\sigma=0.0040\)                                 & \(\sigma=0.0011\)           \\
+            \midrule
+            i can do as the minutes of old            & \(\mu=0.8859\)                                    & \(\mu=0.8898\)              \\
+                                                      & \(\sigma=0.0034\)                                 & \(\sigma=0.0056\)           \\
+            \midrule
+            tom twice caught a beautiful picture      & \(\mu=0.8837\)                                    & \(\mu=0.8717\)              \\
+                                                      & \(\sigma=0.0021\)                                 & \(\sigma=0.0077\)           \\
+            \midrule
+            races  rudimentary organs on              & \(\mu=0.0023\)                                    & \(\mu=0.0014\)              \\
+                                                      & \(\sigma=0.0028\)                                 & \(\sigma=0.0002\)           \\
+            \midrule
+            take young men of made the                & \(\mu=0.8974\)                                    & \(\mu=0.8934\)              \\
+                                                      & \(\sigma=0.0012\)                                 & \(\sigma=0.0008\)           \\
+            \midrule
+            will begin to at court east wind the      & \(\mu=0.8966\)                                    & \(\mu=0.8897\)              \\
+                                                      & \(\sigma=0.0049\)                                 & \(\sigma=0.0029\)           \\
+            \bottomrule
+        \end{tabular}\label{tab5}
+    \end{center}
+\end{table}
 
 Как видим, для некоторых запросов результаты для верхней и нижней десяток практически неразличимы (статистически незначимы).
 Это обусловлено в основном двумя (в некотором смысле взаимодополняющими) причинами, а именно:
@@ -184,4 +220,39 @@ Sweden (Швеция), представлены в таблице \ref{tab4} (з
           из 3036).
 \end{itemize}
 
-Результаты с фильтрацией по данному принципу представлены % TODO: таблица, график
+Результаты с фильтрацией по данному принципу представлены в \ref{tab6} % TODO: график
+\begin{table}[tbp]
+    \caption{Результаты поисковых запросов в модели с примененными ограничениями}
+    \begin{center}
+        \begin{tabular}{ccc}
+            \toprule
+            \textbf{Запрос} & \multicolumn{2}{c}{\textbf{Оценка релевантности}}                               \\
+                            & \textbf{\textit{Top 10}}                          & \textbf{\textit{Bottom 10}} \\
+            \midrule
+            an necessity   he did not                 & \(\mu=0.8746\)                                    & \(\mu=0.0158\)              \\
+                                                      & \(\sigma=0.0573\)                                 & \(\sigma=0.0294\)           \\
+            \midrule
+            for sir henry james  if i                 & \(\mu=0.8935\)                                    & \(\mu=0.3722\)              \\
+                                                      & \(\sigma=0.0025\)                                 & \(\sigma=0.3712\)           \\
+            \midrule
+            has told arthur he had an unusual movement& \(\mu=0.3169\)                                    & \(\mu=0.1191\)              \\
+                                                      & \(\sigma=0.3300\)                                 & \(\sigma=0.0811\)           \\
+            \midrule
+            as und you be fed for us is               & \(\mu=0.8673\)                                    & \(\mu=0.3558\)              \\
+                                                      & \(\sigma=0.0554\)                                 & \(\sigma=0.3477\)           \\
+            \midrule
+            egyptians back      why                   & \(\mu=0.0074\)                                    & \(\mu=0.0007\)              \\
+                                                      & \(\sigma=0.0185\)                                 & \(\sigma<0.0001\)           \\
+            \midrule
+            byron works   he handed it with           & \(\mu=0.8973\)                                    & \(\mu=0.7742\)              \\
+                                                      & \(\sigma=0.0017\)                                 & \(\sigma=0.2588\)           \\
+            \midrule
+            one when charlotte told her story she found& \(\mu=0.8703\)                                    & \(\mu=0.1288\)              \\
+                                                      & \(\sigma=0.0664\)                                 & \(\sigma=0.1885\)           \\
+            \midrule
+            deane looked at him    you                & \(\mu=0.8943\)                                    & \(\mu=0.3500\)              \\
+                                                      & \(\sigma=0.0037\)                                 & \(\sigma=0.3786\)           \\
+            \bottomrule
+        \end{tabular}\label{tab6}
+    \end{center}
+\end{table}
