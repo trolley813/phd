@@ -14,7 +14,7 @@
 \DeclareBibliographyCategory{cited}
 \AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
 \newtheorem{defn}{Определение}
-\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\baselinestretch}{1.6}
 
 % Page numbering style
 \makeevenhead{plain}{}{\thepage}{}
@@ -87,7 +87,7 @@
 \nocite{*}
 %\DeclareUnicodeCharacter{0301}{*************************************}
 \begin{document}
-\relscale{1.07}
+\relscale{1.08}
 \hbadness=10000
 \sloppy
 \input{001_title.tex}
@@ -108,6 +108,10 @@
 \input{200_defs.tex}
 \section{Разбиение проблемы на задачи}
 \input{210_decomposition.tex}
+\section{Анализ методов и алгоритмов решения задач}
+\input{220_methods.tex}
+\section{Разработка общей методики решения всей проблемы}
+\input{230_overview.tex}
 \chapter{Результаты исследования}
 \section{Описание выполненных экспериментов}
 \input{310_models.tex}
