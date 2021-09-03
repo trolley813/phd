@@ -571,7 +571,8 @@ Xiaoqiang~Zheng},
   url       = {https://books.google.ru/books?id=ywlGAAAAMAAJ},
   year      = {1950},
   publisher = {Zator Company},
-  urldate   = {2021-01-07}
+  urldate   = {2021-01-07},
+  pagetotal = {34}
 }
 @article{mooers1950information,
   added-at  = {2011-11-17T13:46:39.000+0100},
@@ -787,7 +788,8 @@ Xiaoqiang~Zheng},
   series    = {Библиотека энциклопедических словарей},
   url       = {https://books.google.ru/books?id=fTUzQwAACAAJ},
   year      = {2008},
-  publisher = {Рипол-Норит}
+  publisher = {Рипол-Норит},
+  pagetotal = {1534}
 }
 @inproceedings{10.3115/981732.981751,
   author    = {Wu, Zhibiao and Palmer, Martha},
@@ -853,7 +855,7 @@ Xiaoqiang~Zheng},
   publisher = {St.-Petersburg :L'Académie,},
   author    = {Санкт-Петербургская Императорская академия наук},
   year      = {1859},
-  pages     = {664},
+  pagetotal = {664},
   keywords  = {Periodicals.|Science}
 }
 @online{pathmind2021,
@@ -916,8 +918,446 @@ Xiaoqiang~Zheng},
   series    = {Engineering professional collection},
   url       = {https://books.google.ru/books?id=-DG18Nf7jLcC},
   year      = {2013},
-  publisher = {Elsevier Science}
+  publisher = {Elsevier Science},
+  pagetotal = {690}
 }
-       
-      
+@article{10.2307/2331554,
+  issn      = {00063444},
+  url       = {http://www.jstor.org/stable/2331554},
+  author    = {Student},
+  journal   = {Biometrika},
+  number    = {1},
+  pages     = {1--25},
+  publisher = {[Oxford University Press, Biometrika Trust]},
+  title     = {The Probable Error of a Mean},
+  volume    = {6},
+  year      = {1908}
+}
+@online{bm25xapian,
+ title      = {The BM25 Weighting Scheme},
+ url        = {https://xapian.org/docs/bm25.html},
+ urldate    = {2021-08-11}
+}       
+@article{10.1561/1500000019,
+  author     = {Robertson, Stephen and Zaragoza, Hugo},
+  title      = {The Probabilistic Relevance Framework: BM25 and Beyond},
+  year       = {2009},
+  issue_date = {April 2009},
+  publisher  = {Now Publishers Inc.},
+  address    = {Hanover, MA, USA},
+  volume     = {3},
+  number     = {4},
+  issn       = {1554-0669},
+  url        = {https://doi.org/10.1561/1500000019},
+  doi        = {10.1561/1500000019},
+  abstract   = {The Probabilistic Relevance Framework (PRF) is a formal framework for document retrieval,
+grounded in work done in the 1970—1980s, which led to the development of one of the
+most successful text-retrieval algorithms, BM25. In recent years, research in the
+PRF has yielded new retrieval models capable of taking into account document meta-data
+(especially structure and link-graph information). Again, this has led to one of the
+most successful Web-search and corporate-search algorithms, BM25F. This work presents
+the PRF from a conceptual point of view, describing the probabilistic modelling assumptions
+behind the framework and the different ranking algorithms that result from its application:
+the binary independence model, relevance feedback models, BM25 and BM25F. It also
+discusses the relation between the PRF and other statistical models for IR, and covers
+some related topics, such as the use of non-textual features, and parameter optimisation
+for models with free parameters.},
+  journal    = {Found. Trends Inf. Retr.},
+  month      = apr,
+  pages      = {333–389},
+  numpages   = {57}
+}
+@inproceedings{10.1145/2063576.2063584,
+  author    = {Lv, Yuanhua and Zhai, ChengXiang},
+  title     = {Lower-Bounding Term Frequency Normalization},
+  year      = {2011},
+  isbn      = {9781450307178},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  url       = {https://doi.org/10.1145/2063576.2063584},
+  doi       = {10.1145/2063576.2063584},
+  abstract  = {In this paper, we reveal a common deficiency of the current retrieval models: the
+component of term frequency (TF) normalization by document length is not lower-bounded
+properly; as a result, very long documents tend to be overly penalized. In order to
+analytically diagnose this problem, we propose two desirable formal constraints to
+capture the heuristic of lower-bounding TF, and use constraint analysis to examine
+several representative retrieval functions. Analysis results show that all these retrieval
+functions can only satisfy the constraints for a certain range of parameter values
+and/or for a particular set of query terms. Empirical results further show that the
+retrieval performance tends to be poor when the parameter is out of the range or the
+query term is not in the particular set. To solve this common problem, we propose
+a general and efficient method to introduce a sufficiently large lower bound for TF
+normalization which can be shown analytically to fix or alleviate the problem. Our
+experimental results demonstrate that the proposed method, incurring almost no additional
+computational cost, can be applied to state-of-the-art retrieval functions, such as
+Okapi BM25, language models, and the divergence from randomness approach, to significantly
+improve the average precision, especially for verbose queries.},
+  booktitle = {Proceedings of the 20th ACM International Conference on Information and Knowledge Management},
+  pages     = {7–16},
+  numpages  = {10},
+  keywords  = {Pl2+, DIR+, document length, data analysis, term frequency, lower bound, BM25+, formal constraints},
+  location  = {Glasgow, Scotland, UK},
+  series    = {CIKM '11}
+}
+@inproceedings{Zaragoza04microsoftcambridge,
+  author    = {Hugo Zaragoza and Nick Craswell and Michael Taylor and Suchi Saria and Stephen Robertson},
+  title     = {Microsoft Cambridge at TREC-13: Web and HARD tracks},
+  booktitle = {IN PROCEEDINGS OF TREC 2004},
+  year      = {2004},
+  publisher = {}
+}
+@inproceedings{Radford2018ImprovingLU,
+  title  = {Improving Language Understanding by Generative Pre-Training},
+  author = {Alec Radford and Karthik Narasimhan},
+  year   = {2018}
+}
+@misc{brown2020language,
+  title         = {Language Models are Few-Shot Learners},
+  author        = {Tom B. Brown and Benjamin Mann and Nick Ryder and Melanie Subbiah and Jared Kaplan and Prafulla Dhariwal and Arvind Neelakantan and Pranav Shyam and Girish Sastry and Amanda Askell and Sandhini Agarwal and Ariel Herbert-Voss and Gretchen Krueger and Tom Henighan and Rewon Child and Aditya Ramesh and Daniel M. Ziegler and Jeffrey Wu and Clemens Winter and Christopher Hesse and Mark Chen and Eric Sigler and Mateusz Litwin and Scott Gray and Benjamin Chess and Jack Clark and Christopher Berner and Sam McCandlish and Alec Radford and Ilya Sutskever and Dario Amodei},
+  year          = {2020},
+  eprint        = {2005.14165},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL}
+}
+@misc{vaswani2017attention,
+  title         = {Attention Is All You Need},
+  author        = {Ashish Vaswani and Noam Shazeer and Niki Parmar and Jakob Uszkoreit and Llion Jones and Aidan N. Gomez and Lukasz Kaiser and Illia Polosukhin},
+  year          = {2017},
+  eprint        = {1706.03762},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL}
+}
+@article{baezayates99,
+  author = {Baeza-Yates, Ricardo and Ribeiro-neto, Berthier and Mills, Don and Bonn, Ontario and Juan, San and Mexico, Milan and Taipei, City and Wesley, Addison and Limited, Longman},
+  year   = {1999},
+  month  = {07},
+  pages  = {},
+  title  = {Modern Information Retrieval}
+}
+@techreport{CS-R9526,
+  title       = {Python tutorial},
+  author      = {G. van Rossum},
+  number      = {CS-R9526},
+  institution = {Centrum voor Wiskunde en Informatica (CWI)},
+  year        = {1995},
+  address     = {Amsterdam},
+  month       = {5}
+}
+@book{10.5555/1593511,
+  author    = {Van Rossum, Guido and Drake, Fred L.},
+  title     = {Python 3 Reference Manual},
+  year      = {2009},
+  isbn      = {1441412697},
+  publisher = {CreateSpace},
+  address   = {Scotts Valley, CA},
+  pagetotal = {242}
+} 
+@online{python,
+  title     = {Python Language Reference},
+  publisher = {Python Software Foundation},
+  url       = {https://docs.python.org/3/reference/},
+  version   = {3.9.6},
+  urldate   = {2021-08-27}
+}
+@online{python-c-api,
+  title     = {Python/C API Reference Manual},
+  publisher = {Python Software Foundation},
+  url       = {https://docs.python.org/3/c-api/index.html},
+  version   = {3.9.6},
+  urldate   = {2021-08-27}
+}
+@online{pypi,
+  title     = {Python Package Index - PyPI},
+  url       = {https://pypi.org/},
+  urldate   = {2021-03-28},
+  publisher = {Python Software Foundation}
+} 
+@online{ml-popularity-2017,
+  url       = {https://towardsdatascience.com/what-is-the-best-programming-language-for-machine-learning-a745c156d6b7},
+  date      = {2017-05-05},
+  urldate   = {2021-08-27},
+  title     = {What is the best programming language for Machine Learning?},
+  publisher = {Developer Nation},
+  author    = {Christina Voskoglou}
+}
+@article{10.1111/j.1751-5823.2011.00149,
+  author  = {Draper, Norman R.},
+  title   = {The Cambridge Dictionary of Statistics, Fourth Edition by B. S. Everitt, A. Skrondal},
+  journal = {International Statistical Review},
+  volume  = {79},
+  number  = {2},
+  pages   = {273-274},
+  doi     = {https://doi.org/10.1111/j.1751-5823.2011.00149\_2.x},
+  url     = {https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1751-5823.2011.00149_2.x},
+  eprint  = {https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1751-5823.2011.00149_2.x},
+  year    = {2011}
+}
+@book{burnham2003model,
+  title     = {Model Selection and Multimodel Inference: A Practical Information-Theoretic Approach},
+  author    = {Burnham, K.P. and Anderson, D.R.},
+  isbn      = {9780387953649},
+  lccn      = {2001057677},
+  url       = {https://books.google.ru/books?id=BQYR6js0CC8C},
+  year      = {2003},
+  publisher = {Springer New York},
+  pagetotal = {488}
+}
+@online{datastorage,
+  publisher    = {ITGlobal},
+  title        = {СХД (система хранения данных): как выбрать, характеристики, вендоры},
+  url          = {https://itglobal.com/ru-ru/company/glossary/shd-sistema-hraneniya-dannyh/},
+  urldate      = {2021-08-28}
+}
+@article{10.1145/296854.277632,
+  author     = {Zobel, Justin and Moffat, Alistair and Ramamohanarao, Kotagiri},
+  title      = {Inverted Files versus Signature Files for Text Indexing},
+  year       = {1998},
+  issue_date = {Dec. 1998},
+  publisher  = {Association for Computing Machinery},
+  address    = {New York, NY, USA},
+  volume     = {23},
+  number     = {4},
+  issn       = {0362-5915},
+  url        = {https://doi.org/10.1145/296854.277632},
+  doi        = {10.1145/296854.277632},
+  month      = {12},
+  pages      = {453–490},
+  numpages   = {38},
+  keywords   = {text databases, inverted files, signature files, indexing, performance, text indexing}
+}
+@article{Harispe_2015,
+  title     = {Semantic Similarity from Natural Language and Ontology Analysis},
+  volume    = {8},
+  issn      = {1947-4059},
+  url       = {http://dx.doi.org/10.2200/S00639ED1V01Y201504HLT027},
+  doi       = {10.2200/s00639ed1v01y201504hlt027},
+  number    = {1},
+  journal   = {Synthesis Lectures on Human Language Technologies},
+  publisher = {Morgan & Claypool Publishers LLC},
+  author    = {Harispe, Sébastien and Ranwez, Sylvie and Janaqi, Stefan and Montmain, Jacky},
+  year      = {2015},
+  month     = {May},
+  pages     = {1–254}
+}
+@article{feng_bagheri_ensan_jovanovic_2017,
+  title     = {The state of the art in semantic relatedness: a framework for comparison},
+  volume    = {32},
+  doi       = {10.1017/S0269888917000029},
+  journal   = {The Knowledge Engineering Review},
+  publisher = {Cambridge University Press},
+  author    = {Feng, Yue and Bagheri, Ebrahim and Ensan, Faezeh and Jovanovic, Jelena},
+  year      = {2017},
+  pages     = {e10}
+}
+@book{jurafsky2000speech,
+  title     = {Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition},
+  author    = {Jurafsky, D. and Jurafsky, D.S.J. and Martin, J.H. and Kehler, A. and LINDEN, K.V.A. and Ward, N.},
+  isbn      = {9780130950697},
+  lccn      = {99087845},
+  series    = {Practical Resources for the Mental Health Professionals Series},
+  url       = {https://books.google.ru/books?id=y0xQAAAAMAAJ},
+  year      = {2000},
+  publisher = {Prentice Hall},
+  pagetotal = {934}
+}
+@misc{mikolov2013distributed,
+  title         = {Distributed Representations of Words and Phrases and their Compositionality},
+  author        = {Tomas Mikolov and Ilya Sutskever and Kai Chen and Greg Corrado and Jeffrey Dean},
+  year          = {2013},
+  eprint        = {1310.4546},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL}
+}
+@book{ganguly2017learning,
+  title     = {Learning Generative Adversarial Networks},
+  author    = {Ganguly, K.},
+  isbn      = {9781788396417},
+  url       = {https://books.google.nl/books?id=bbBoswEACAAJ},
+  year      = {2017},
+  publisher = {Packt Publishing},
+  pagetotal = {180}
+}
+@book{ahirwar2019generative,
+  title     = {Generative Adversarial Networks Projects: Build next-generation generative models using TensorFlow and Keras},
+  author    = {Ahirwar, K.},
+  isbn      = {9781789134193},
+  url       = {https://books.google.nl/books?id=kmSGDwAAQBAJ},
+  year      = {2019},
+  publisher = {Packt Publishing},
+  pagetotal = {316},
+}
+@book{kalin2018generative,
+  title     = {Generative Adversarial Networks Cookbook: Over 100 Recipes to Build Generative Models Using Python, TensorFlow, and Keras},
+  author    = {Kalin, J.},
+  isbn      = {9781789139907},
+  url       = {https://books.google.nl/books?id=q57AuQEACAAJ},
+  year      = {2018},
+  publisher = {Packt Publishing},
+  pagetotal = {268}
+}
+@book{langr2019gans,
+  title     = {GANs in Action: Deep learning with Generative Adversarial Networks},
+  author    = {Langr, J. and Bok, V.},
+  isbn      = {9781617295560},
+  lccn      = {2019286864},
+  url       = {https://books.google.nl/books?id=HojvugEACAAJ},
+  year      = {2019},
+  publisher = {Manning Publications},
+  pagetotal = {276}
+}
+@book{brownlee2019generative,
+  title     = {Generative Adversarial Networks with Python: Deep Learning Generative Models for Image Synthesis and Image Translation},
+  author    = {Brownlee, J.},
+  url       = {https://books.google.nl/books?id=YBimDwAAQBAJ},
+  year      = {2019},
+  publisher = {Machine Learning Mastery},
+  pagetotal = {652}
+}
+@book{sogaard2019cross,
+  title     = {Cross-Lingual Word Embeddings},
+  author    = {S{\o}gaard, A. and Vuli{\'c}, I. and Ruder, S. and Faruqui, M. and Hirst, G.},
+  isbn      = {9781681730646},
+  series    = {Synthesis Lectures on Human Language Technologies},
+  url       = {https://books.google.nl/books?id=nxidDwAAQBAJ},
+  year      = {2019},
+  publisher = {Morgan \& Claypool Publishers},
+  pagetotal = {132}
+}
+@book{hellrich2019word,
+  title     = {Word Embeddings: Reliability \& Semantic Change},
+  author    = {Hellrich, J.},
+  isbn      = {9781614999959},
+  series    = {Dissertations in Artificial Intelligence},
+  url       = {https://books.google.nl/books?id=92OwDwAAQBAJ},
+  year      = {2019},
+  publisher = {IOS Press},
+  pagetotal = {188}
+}
+@book{fellbaum1998wordnet,
+  title     = {WordNet: An Electronic Lexical Database},
+  author    = {Fellbaum, C. and Miller, G.A.},
+  isbn      = {9780262061971},
+  lccn      = {97048710},
+  series    = {Language, speech, and communication},
+  url       = {https://books.google.nl/books?id=Rehu8OOzMIMC},
+  year      = {1998},
+  publisher = {MIT Press},
+  pagetotal = {132},
+}
+@book{gomez2005semantic,
+  title     = {The Semantic Web: Research and Applications: Second European Semantic Web Conference, ESWC 2005, Heraklion, Crete, Greece, May 29--June 1, 2005, Proceedings},
+  author    = {G{\'o}mez-P{\'e}rez, A. and Gomez-Perez, A. and Euzenat, J. and Conference, E.S.W. and Euzenat, J.},
+  isbn      = {9783540261247},
+  lccn      = {2005926291},
+  series    = {Information Systems and Applications, incl. Internet/Web, and HCI},
+  url       = {https://books.google.nl/books?id=JRmrYwLLQe0C},
+  year      = {2005},
+  publisher = {Springer},
+  pagetotal = {728}
+}
+@book{reitz2016hitchhiker,
+  title     = {The Hitchhiker's Guide to Python: Best Practices for Development},
+  author    = {Reitz, K. and Schlusser, T.},
+  isbn      = {9781491933176},
+  lccn      = {2016461739},
+  url       = {https://books.google.nl/books?id=2ZggjwEACAAJ},
+  year      = {2016},
+  publisher = {O'Reilly Media, Incorporated},
+  pagetotal = {321}
+}
+@book{shaw2013learn,
+  title     = {Learn Python the Hard Way: A Very Simple Introduction to the Terrifyingly Beautiful World of Computers and Code},
+  author    = {Shaw, Z.A.},
+  isbn      = {9780133124347},
+  series    = {Zed Shaw's Hard Way Series},
+  url       = {https://books.google.nl/books?id=CfcEAQAAQBAJ},
+  year      = {2013},
+  publisher = {Pearson Education},
+  pagetotal = {320}
+}
+@book{lutz2013learning,
+  title     = {Learning Python: Powerful Object-Oriented Programming},
+  author    = {Lutz, M.},
+  isbn      = {9781449355692},
+  series    = {Safari Books Online},
+  url       = {https://books.google.nl/books?id=4pgQfXQvekcC},
+  year      = {2013},
+  publisher = {O'Reilly Media},
+  pagetotal = {1648}
+}
+@book{atienza2018advanced,
+  title     = {Advanced Deep Learning with Keras: Apply deep learning techniques, autoencoders, GANs, variational autoencoders, deep reinforcement learning, policy gradients, and more},
+  author    = {Atienza, R.},
+  isbn      = {9781788624534},
+  url       = {https://books.google.nl/books?id=Vuh1DwAAQBAJ},
+  year      = {2018},
+  publisher = {Packt Publishing},
+  pagetotal = {368}
+}
+@book{ciaburro2018keras,
+  title     = {Keras 2.x Projects: 9 projects demonstrating faster experimentation of neural network and deep learning applications using Keras},
+  author    = {Ciaburro, G.},
+  isbn      = {9781789534160},
+  url       = {https://books.google.nl/books?id=xR2CDwAAQBAJ},
+  year      = {2018},
+  publisher = {Packt Publishing},
+  pagetotal = {394},
+}
+@book{gulli2017deep,
+  title     = {Deep Learning with Keras},
+  author    = {Gulli, A. and Pal, S.},
+  isbn      = {9781787129030},
+  url       = {https://books.google.nl/books?id=20EwDwAAQBAJ},
+  year      = {2017},
+  publisher = {Packt Publishing},
+  pagetotal = {318}
+}
+@book{bharat2019tensorflow,
+  title     = {TensorFlow for Deep Learning},
+  author    = {Бхарат, Р.},
+  isbn      = {9785977540148},
+  series    = {Внесерийные книги},
+  url       = {https://books.google.nl/books?id=j9UHEAAAQBAJ},
+  year      = {2019},
+  publisher = {БХВ-Петербург},
+  pagetotal = {256}
+}
+@book{scarpino2018tensorflow,
+  title     = {TensorFlow For Dummies},
+  author    = {Scarpino, M.},
+  isbn      = {9781119466215},
+  lccn      = {2018933981},
+  url       = {https://books.google.nl/books?id=MVxPDwAAQBAJ},
+  year      = {2018},
+  publisher = {Wiley},
+  pagetotal = {368}
+}
+@book{singh2019learn,
+  title     = {Learn TensorFlow 2.0: Implement Machine Learning and Deep Learning Models with Python},
+  author    = {Singh, P. and Manure, A.},
+  isbn      = {9781484255582},
+  url       = {https://books.google.nl/books?id=3\_rEDwAAQBAJ},
+  year      = {2019},
+  publisher = {Apress},
+  pagetotal = {194}
+}
 
+@online{source-repo,
+  title     = {GitHub - trolley813/text-search},
+  url       = {https://github.com/trolley813/text-search},
+  urldate   = {2021-08-28},
+  author    = {trolley813},
+  publisher = {GitHub}
+}
+@unpublished{art1,
+  author = {Dmitry N. Galanin and Nail R. Bukharaev and Alexander M. Gusenkov},
+  title  = {Generative Adversarial Network-based Approaches for Relevance Evaluation of Semantic Search Results},
+  note   = {},
+  year   = {2021}
+}
+@unpublished{art2,
+  author = {Д. Н. Галанин},
+  title  = {Применение генеративно-состязательных сетей к задачам оценки релевантности результатов семантического поиска в многоязычных поисковых системах},
+  note   = {},
+  year   = {2021}
+}
