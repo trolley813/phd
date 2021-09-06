@@ -11,28 +11,35 @@
 \usepackage{graphicx}
 \usepackage{relsize}
 \usepackage{listings}
-\geometry{a4paper, top=20mm, bottom=20mm, left=25mm, right=15mm}
+\usepackage{secdot}
+\usepackage{caption}
+\geometry{a4paper, top=20mm, bottom=20mm, left=30mm, right=15mm}
 \DeclareBibliographyCategory{cited}
 \AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
 \newtheorem{defn}{Определение}
 \renewcommand{\baselinestretch}{1.6}
 
+% Captions
+\captionsetup[figure]{name={Рисунок},labelsep=period}
+\captionsetup[table]{name={Таблица},labelsep=period}
+
 % Page numbering style
-\makeevenhead{plain}{}{\thepage}{}
-\makeoddhead{plain}{}{\thepage}{}
-\makeevenfoot{plain}{}{}{}
-\makeoddfoot{plain}{}{}{}
+\makeevenhead{plain}{}{}{}
+\makeoddhead{plain}{}{}{}
+\makeevenfoot{plain}{}{\thepage}{}
+\makeoddfoot{plain}{}{\thepage}{}
 \pagestyle{plain}
 
 % Headers etc.
 \newcommand{\basegostsectionfont}{\fontsize{15pt}{17pt}\selectfont\bfseries}
 \newcommand{\hdngalign}{\centering}
 \newcommand{\hdngaligni}{}
+\setlength{\parindent}{12.5mm}
 \newlength{\myindentlen}
 \setlength{\myindentlen}{1\parindent}
 
 \newlength{\curtextsize}
-\setlength{\myindentlen}{15pt}
+\setlength{\curtextsize}{15pt}
 
 \makechapterstyle{thesisgost}{%
     \chapterstyle{default}
@@ -60,25 +67,25 @@
 \chapterstyle{thesisgost}
 
 \setsecheadstyle{\basegostsectionfont\hdngalign}
-\setsecindent{\myindentlen}
+%\setsecindent{\myindentlen}
 
 \setsubsecheadstyle{\basegostsectionfont\hdngalign}
-\setsubsecindent{\myindentlen}
+%\setsubsecindent{\myindentlen}
 
 \setsubsubsecheadstyle{\basegostsectionfont\hdngalign}
-\setsubsubsecindent{\myindentlen}
+%\setsubsubsecindent{\myindentlen}
 
 %\sethangfrom{\noindent #1}
 
 \chapterstyle{thesisgostchapname}
 \renewcommand*{\cftchaptername}{\chaptername\space}
 
-\setbeforesecskip{3\baselineskip}
-\setaftersecskip{2\baselineskip}
-\setbeforesubsecskip{3\baselineskip}
-\setaftersubsecskip{2\baselineskip}
-\setbeforesubsubsecskip{3\baselineskip}
-\setaftersubsubsecskip{2\baselineskip}
+%\setbeforesecskip{3\baselineskip}
+%\setaftersecskip{2\baselineskip}
+%\setbeforesubsecskip{3\baselineskip}
+%\setaftersubsecskip{2\baselineskip}
+%\setbeforesubsubsecskip{3\baselineskip}
+%\setaftersubsubsecskip{2\baselineskip}
 
 
 \setlength{\cftbeforechapterskip}{0pt plus 0pt}
@@ -93,8 +100,8 @@
 \sloppy
 \input{001_title.tex}
 \tableofcontents*
-\chapter*{Введение}
-\addcontentsline{toc}{chapter}{Введение}
+\chapter*{ВВЕДЕНИЕ}
+\addcontentsline{toc}{chapter}{ВВЕДЕНИЕ}
 \input{002_intro.tex}
 \chapter{Современное состояние проблемы оценки релевантности}
 \section{Анализ состояние отрасли знаний. Исторические аспекты проблемы}
@@ -129,9 +136,9 @@
 \input{320_comparison.tex}
 \section{Предложения по возможности практического и научного использования результатов решения проблемы}
 \input{330_usage.tex}
-\chapter*{Заключение}
-\addcontentsline{toc}{chapter}{Заключение}
+\chapter*{ЗАКЛЮЧЕНИЕ}
+\addcontentsline{toc}{chapter}{ЗАКЛЮЧЕНИЕ}
 \input{999_conclusion.tex}
-\printbibliography[title={Список использованных источников},category=cited]
+\printbibliography[title={СПИСОК ИСПОЛЬЗОВАННОЙ ЛИТЕРАТУРЫ},category=cited]
 \printbibliography[title={Непроцитированные источники (должно быть пусто)},notcategory=cited]
 \end{document}
